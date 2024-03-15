@@ -16,18 +16,18 @@ resource "aws_s3_object" "object" {
 }
 
 resource "aws_iam_role" "role" {
-  name               = "helloworld_lambda_role"
+  name               = "helloworld_lambda_role_${random_id.name.hex}"
   assume_role_policy = file("config/lambda_assume_role_policy.json")
 }
 
 resource "aws_iam_role_policy" "policy" {
-  name   = "helloworld_lambda_policy"
+  name   = "helloworld_lambda_policy_${random_id.name.hex}"
   role   = aws_iam_role.role.id
   policy = file("config/lambda_policy.json")
 }
 
 resource "aws_lambda_function" "lambda" {
-  function_name = "hello_world"
+  function_name = "hello_world_${random_id.name.hex}"
   s3_bucket     = aws_s3_bucket.name.id
   s3_key        = "hello.zip"
   role          = aws_iam_role.role.arn
