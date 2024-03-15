@@ -2,8 +2,8 @@ name: "Terraform Pipeline Plan"
 
 on:
   push:
-    branches:
-      - develop
+    branches-ignore:
+      - main
 
 jobs:
   terraform:

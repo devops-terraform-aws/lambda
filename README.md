@@ -1,7 +1,6 @@
 # Deploy Hello World Using Lambda Function
-![hello-world](./images/image.png)
 
-## Terraform Virtual Environment Configuration - WSL-Ubuntu (Optional)
+### Terraform Virtual Environment Configuration - WSL-Ubuntu (Optional)
 - Configure virtual environment on `Ubuntu WSL`
 
 ```
