@@ -61,6 +61,7 @@ jobs:
       run: terraform destroy -auto-approve
 
     - name: clean up
+      if: github.ref == 'refs/heads/main'
       run: |
          rm -r ./* *.zip
       shell: bash
