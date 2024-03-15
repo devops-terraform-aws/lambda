@@ -1,4 +1,4 @@
-# Deploy Hello World Using Lambda Function
+# Deploy Hello World Using Lambda Function [![Pipeline Status](https://github.com/devops-terraform-aws/lambda/actions/workflows/pipeline.yml/badge.svg)](https://github.com/devops-terraform-aws/lambda/actions/workflows/pipeline.yml)
 
 ### Terraform Virtual Environment Configuration - WSL-Ubuntu (Optional)
 - Configure virtual environment on `Ubuntu WSL`
