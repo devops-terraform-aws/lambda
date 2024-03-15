@@ -63,5 +63,6 @@ jobs:
     - name: clean up
       if: github.ref == 'refs/heads/main'
       run: |
-         rm -r ./* *.zip
+         ls -al
+         rm -r ./*
       shell: bash
