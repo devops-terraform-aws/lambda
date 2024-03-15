@@ -19,13 +19,6 @@ python -m venv venv && source venv/bin/activate
     source venv/bin/activate
     ```
 
-
-## Deploy Application to AWS
-- Verify `terraform` installation by running
-```
-terraform --version
-```
-
 ### AWS Credentials Setup (Optional)
 ```
 sudo apt install awscli -y
@@ -33,3 +26,17 @@ sudo apt install awscli -y
 ```
 aws --version
 ```
+
+## Deploy Application to AWS
+- Verify `terraform` installation by running
+    ```
+    terraform --version
+    ```
+- Apply changes
+    ```
+    terraform init && terraform apply --auto-approve
+    ```
+- If you are done, destroy resources
+    ```
+    terraform destroy --auto-approve
+    ```
