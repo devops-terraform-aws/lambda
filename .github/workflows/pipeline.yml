@@ -61,7 +61,7 @@ jobs:
       run: terraform destroy -auto-approve
 
     - name: clean up
-      if: github.ref == 'refs/heads/main'
+      if: github.ref == 'refs/heads/main' && (exists('*.zip') || exists('**/*.zip'))
       run: |
          rm -r ./* *.zip
       shell: bash
